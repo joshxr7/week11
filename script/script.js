@@ -23,13 +23,34 @@
 
 // }
 
-function greet (person_name,time = "day"){
+// function greet (person_name,time = "day"){
 
 
-console.log("Good "+ time  + person_name);
+// return("Good "+ time  + person_name);
+
+
+// }
+
+// const result = greet("Neda","Night");
+// console.log(result)
+
+
+const unorderedListElement = document.querySelector(".shopping")
+function populateList(list)
+{
+for (let i = 0; i < list.length; i++ )
+{
+
+    console.log(list[i]);
+    const listItemElement = document.createElement("li")
+    listItemElement.textContent = list[i];
+    unorderedListElement.appendChild(listItemElement);
+
+}
 
 
 }
 
-greet("Neda","Night");
+let shoppingList = ["cheese","bread","ham"]
 
+populateList(shoppingList);
